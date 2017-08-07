@@ -57,7 +57,7 @@ var articles = {
 };
 
 var names = [];
-app.get('/submit-name/:name', function( req, res) {
+app.get('/submit-name', function( req, res) {
    //Get the request from the server
    var name = req.query.name;
    names.push(name);
