@@ -1,3 +1,4 @@
 console.log('Loaded!');
-var element = document.getElementId('main-text');
+//changing the stmts
+var element = document.getElementById('main-text');
 element.innerHTML  = 'New Value';
