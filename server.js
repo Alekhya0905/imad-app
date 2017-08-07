@@ -73,7 +73,6 @@ function createTemplate(data) {
                 </title>
                 <meta name="viewport" context="width=device-width, initial-scale=1" />
                 <link href="/ui/style.css" rel="stylesheet" />
-                
             </head>
             <body>
                 <div class="container">
@@ -100,12 +99,10 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get(':/articleName', function (req, res) {
+app.get('/:articleName', function (req, res) {
   var articleName = req.params.articleName;
   res.send(createTemplate(articles[articleName]));
 });
-
-
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
